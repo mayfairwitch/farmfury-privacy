@@ -5,27 +5,61 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Farm Fury - Privacy Policy</title>
 <style>
-body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 720px; margin: 0 auto; padding: 16px; line-height: 1.6; color: #222; background: #fafafa; }
-h1 { color: #d4503a; font-size: 1.5em; }
-h2 { color: #444; font-size: 1.2em; border-bottom: 1px solid #ddd; padding-bottom: 4px; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 720px; margin: 0 auto; padding: 0 16px 40px; line-height: 1.6; color: #222; background: #fafafa; }
+.lang-bar { position: sticky; top: 0; background: #fff; border-bottom: 2px solid #d4503a; padding: 10px 0; z-index: 100; display: flex; flex-wrap: wrap; gap: 4px; justify-content: center; }
+.lang-btn { border: 1px solid #ccc; background: #f5f5f5; padding: 4px 10px; border-radius: 4px; cursor: pointer; font-size: 13px; color: #444; transition: all 0.15s; white-space: nowrap; }
+.lang-btn:hover { background: #e8e8e8; }
+.lang-btn.active { background: #d4503a; color: #fff; border-color: #d4503a; font-weight: bold; }
+.policy-section { display: none; padding-top: 16px; }
+.policy-section.active { display: block; }
+.policy-section[dir="rtl"] { text-align: right; }
+h1 { color: #d4503a; font-size: 1.5em; margin: 16px 0 4px; }
+h2 { color: #444; font-size: 1.15em; border-bottom: 1px solid #ddd; padding-bottom: 4px; margin: 20px 0 8px; }
+h3 { color: #555; font-size: 1em; margin: 14px 0 6px; }
+p { margin: 8px 0; }
+ul { padding-left: 20px; margin: 6px 0; }
 a { color: #1a73e8; }
 .updated { color: #888; font-size: 0.9em; }
-ul { padding-left: 20px; }
+table { border-collapse: collapse; width: 100%; margin: 8px 0; }
+th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+th { background: #f0f0f0; }
+[dir="rtl"] th, [dir="rtl"] td { text-align: right; }
+[dir="rtl"] ul { padding-left: 0; padding-right: 20px; }
 </style>
 </head>
 <body>
+
+<div class="lang-bar" id="langBar">
+<button class="lang-btn active" onclick="showLang('en')">English</button>
+<button class="lang-btn" onclick="showLang('es')">Espa&#241;ol</button>
+<button class="lang-btn" onclick="showLang('fr')">Fran&#231;ais</button>
+<button class="lang-btn" onclick="showLang('pt')">Portugu&#234;s</button>
+<button class="lang-btn" onclick="showLang('ca')">Catal&#224;</button>
+<button class="lang-btn" onclick="showLang('tr')">T&#252;rk&#231;e</button>
+<button class="lang-btn" onclick="showLang('ru')">&#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;</button>
+<button class="lang-btn" onclick="showLang('hi')">&#2361;&#2367;&#2344;&#2381;&#2342;&#2368;</button>
+<button class="lang-btn" onclick="showLang('ar')">&#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;</button>
+<button class="lang-btn" onclick="showLang('ja')">&#26085;&#26412;&#35486;</button>
+<button class="lang-btn" onclick="showLang('vi')">Ti&#7871;ng Vi&#7879;t</button>
+<button class="lang-btn" onclick="showLang('id')">Indonesia</button>
+<button class="lang-btn" onclick="showLang('ms')">Melayu</button>
+</div>
+
+<!-- ═══ ENGLISH ═══ -->
+<div class="policy-section active" id="lang-en">
 <h1>Farm Fury - Privacy Policy</h1>
-<p class="updated">Last Updated: March 16, 2026</p>
+<p class="updated">Last Updated: April 3, 2026</p>
 
 <h2>1. Introduction</h2>
-<p>This privacy policy explains how "Farm Fury — Last Beast Standing" ("the Game"), developed by the developer ("we", "us"), handles information when you use our mobile application. We are committed to protecting your privacy and being transparent about our data practices.</p>
+<p>This privacy policy explains how "Farm Fury — Last Beast Standing" ("the Game") handles information when you use our mobile application. We are committed to protecting your privacy.</p>
 
 <h2>2. Information We Collect</h2>
 <p><strong>We do not collect any personal information directly.</strong> The Game does not require account creation, login, or any personal data entry. All game progress is stored locally on your device only.</p>
 <p>However, third-party services integrated into the Game may collect certain information automatically:</p>
 
 <h3>2.1 Google AdMob (Advertising)</h3>
-<p>We use Google AdMob to display advertisements. AdMob may collect:</p>
+<p>AdMob may collect:</p>
 <ul>
 <li>Device advertising identifier (Ad ID)</li>
 <li>IP address</li>
@@ -33,89 +67,627 @@ ul { padding-left: 20px; }
 <li>Approximate location (derived from IP address)</li>
 <li>App usage data and interaction with ads</li>
 </ul>
-<p>For more information, see <a href="https://policies.google.com/privacy">Google's Privacy Policy</a> and <a href="https://support.google.com/admob/answer/6128543">How Google uses data from apps</a>.</p>
+<p>See <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</p>
 
 <h3>2.2 Firebase Crashlytics (Crash Reporting)</h3>
-<p>We use Google Firebase Crashlytics to monitor app stability and fix crashes. Crashlytics may collect:</p>
+<p>Crashlytics may collect:</p>
 <ul>
-<li>Anonymous session ID (randomly generated, not linked to any account or identity)</li>
+<li>Anonymous session ID (randomly generated, not linked to any identity)</li>
 <li>Device model and manufacturer</li>
 <li>Operating system version</li>
 <li>App version</li>
 <li>Crash stack traces and error logs</li>
 </ul>
-<p><strong>No personally identifiable information is collected.</strong> The anonymous session ID is used solely to group crash reports from the same device session. This data is used exclusively for improving app stability.</p>
-<p>Processed by Google Firebase under Google's data processing terms: <a href="https://firebase.google.com/support/privacy">Firebase Privacy</a>.</p>
+<p><strong>No personally identifiable information is collected.</strong></p>
+<p>See <a href="https://firebase.google.com/support/privacy">Firebase Privacy</a>.</p>
 
-<h3>2.3 Google Analytics for Firebase (Analytics)</h3>
-<p>We use Google Analytics for Firebase to understand aggregate player behavior and improve the Game. Analytics may collect:</p>
+<h3>2.3 Google Analytics for Firebase</h3>
+<p>Analytics may collect:</p>
 <ul>
-<li>Anonymous session ID (same as above, randomly generated)</li>
-<li>App events (session start, level start, level complete, ad interactions)</li>
-<li>Device type and manufacturer</li>
-<li>Operating system version</li>
+<li>Anonymous session ID</li>
+<li>App events (session start, level complete, ad interactions)</li>
+<li>Device type and OS version</li>
 <li>Country and language settings</li>
 </ul>
-<p><strong>No personally identifiable information is collected.</strong> This data is used solely to understand aggregate player behavior and improve the Game. Analytics data is stored in the European Union.</p>
-<p>Processed by Google under <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>. Players can opt out by adjusting their device's advertising settings.</p>
+<p><strong>No personally identifiable information is collected.</strong> Data is stored in the EU.</p>
 
 <h2>3. How Information Is Used</h2>
 <ul>
-<li><strong>Advertising:</strong> To display relevant advertisements and measure ad performance</li>
-<li><strong>Analytics:</strong> To understand app usage patterns and improve the Game</li>
-<li><strong>Crash Reporting:</strong> To identify and fix crashes and stability issues</li>
+<li><strong>Advertising:</strong> To display ads and measure performance</li>
+<li><strong>Analytics:</strong> To understand usage patterns and improve the Game</li>
+<li><strong>Crash Reporting:</strong> To identify and fix crashes</li>
 </ul>
 
 <h2>4. Personalized vs. Non-Personalized Ads</h2>
-<p>When you first launch the Game, you are asked to choose between personalized and non-personalized advertisements:</p>
+<p>On first launch, you choose between personalized and non-personalized ads. You can change this anytime in Settings > "Ad Preferences".</p>
+
+<h2>5. Data Storage</h2>
+<p>All game progress is stored locally on your device. It is never transmitted to any server. Uninstalling deletes all local data.</p>
+
+<h2>6. Children's Privacy</h2>
+<p>The Game is designed for general audiences. We do not knowingly collect personal information from children under 13 (or under 16 in the EEA).</p>
+
+<h2>7. Your Rights (GDPR / CCPA / LGPD)</h2>
+<p>You may have the right to: access, delete, opt out of personalized ads, portability, and rectification of your data. Contact us to exercise these rights.</p>
+
+<h2>8. Device Permissions</h2>
 <ul>
-<li><strong>Personalized ads:</strong> AdMob uses your device data to show ads relevant to your interests</li>
-<li><strong>Non-personalized ads:</strong> Ads are shown based on contextual information only, not your personal data</li>
-</ul>
-<p>You can change this preference at any time in the Game's settings under "Ad Preferences".</p>
-
-<h2>5. App Store Rating Prompt</h2>
-<p>The Game may occasionally ask you to rate it on the Google Play Store. This prompt is displayed based on local gameplay milestones only (number of sessions and levels completed). <strong>No data is collected, transmitted, or shared as part of this prompt.</strong> Tapping "Rate Now" opens the Google Play Store listing. You can permanently dismiss the prompt at any time.</p>
-
-<h2>6. Data Storage</h2>
-<p>Game progress (scores, unlocked characters, settings) is stored locally on your device in a configuration file. This data is never transmitted to any server. Uninstalling the Game deletes all local data.</p>
-
-<h2>7. Children's Privacy</h2>
-<p>The Game is designed for general audiences. We do not knowingly collect personal information from children under 13 (or under 16 in the EEA). The Game uses Google AdMob which is configured for general audiences.</p>
-
-<h2>8. Your Rights (GDPR / CCPA / LGPD)</h2>
-<p>Depending on your location, you may have the following rights regarding your data:</p>
-<ul>
-<li><strong>Right to Access:</strong> Request information about data collected about you</li>
-<li><strong>Right to Deletion:</strong> Request deletion of your data</li>
-<li><strong>Right to Opt-Out:</strong> Opt out of personalized advertising at any time via the Game's settings</li>
-<li><strong>Right to Portability:</strong> Request a copy of your data in a portable format</li>
-<li><strong>Right to Rectification:</strong> Request correction of inaccurate data</li>
-</ul>
-<p>To exercise any of these rights, contact us at the email address below. You can also reset your advertising identifier or opt out of personalized ads through your device settings.</p>
-
-<h2>9. Device Permissions</h2>
-<p>The Game requests the following Android permissions:</p>
-<ul>
-<li><strong>INTERNET:</strong> Required to load and display advertisements</li>
-<li><strong>ACCESS_NETWORK_STATE:</strong> Required to check network connectivity before loading ads</li>
-<li><strong>AD_ID:</strong> Required by Google AdMob for advertising functionality</li>
+<li><strong>INTERNET:</strong> Required for advertisements</li>
+<li><strong>AD_ID:</strong> Required by Google AdMob</li>
 </ul>
 
-<h2>10. Third-Party Services</h2>
-<table border="1" cellpadding="8" cellspacing="0" style="border-collapse:collapse; width:100%;">
-<tr><th>Service</th><th>Purpose</th><th>Privacy Policy</th></tr>
+<h2>9. Third-Party Services</h2>
+<table><tr><th>Service</th><th>Purpose</th><th>Privacy Policy</th></tr>
 <tr><td>Google AdMob</td><td>Advertising</td><td><a href="https://policies.google.com/privacy">Link</a></td></tr>
 <tr><td>Firebase Crashlytics</td><td>Crash Reporting</td><td><a href="https://firebase.google.com/support/privacy">Link</a></td></tr>
-<tr><td>Google Analytics for Firebase</td><td>Analytics</td><td><a href="https://policies.google.com/privacy">Link</a></td></tr>
-</table>
+<tr><td>Google Analytics</td><td>Analytics</td><td><a href="https://policies.google.com/privacy">Link</a></td></tr></table>
 
-<h2>11. Changes to This Policy</h2>
-<p>We may update this privacy policy from time to time. The "Last Updated" date at the top will reflect any changes. Continued use of the Game after changes constitutes acceptance of the updated policy.</p>
+<h2>10. Changes to This Policy</h2>
+<p>We may update this policy. The "Last Updated" date will reflect changes.</p>
 
-<h2>12. Contact Us</h2>
-<p>If you have questions about this privacy policy or wish to exercise your data rights, contact us at:</p>
+<h2>11. Contact Us</h2>
 <p><strong>Email:</strong> farmfurygames@gmail.com</p>
 <p><em>Please include "Farm Fury Privacy" in the subject line.</em></p>
+</div>
+
+<!-- ═══ SPANISH ═══ -->
+<div class="policy-section" id="lang-es">
+<h1>Farm Fury - Pol&#237;tica de Privacidad</h1>
+<p class="updated">&#218;ltima actualizaci&#243;n: 3 de abril de 2026</p>
+
+<h2>1. Introducci&#243;n</h2>
+<p>Esta pol&#237;tica de privacidad explica c&#243;mo "Farm Fury — Last Beast Standing" ("el Juego") gestiona la informaci&#243;n cuando usas nuestra aplicaci&#243;n m&#243;vil. Nos comprometemos a proteger tu privacidad.</p>
+
+<h2>2. Informaci&#243;n que recopilamos</h2>
+<p><strong>No recopilamos informaci&#243;n personal directamente.</strong> El Juego no requiere creaci&#243;n de cuenta, inicio de sesi&#243;n ni introducci&#243;n de datos personales. Todo el progreso se almacena localmente en tu dispositivo.</p>
+<p>Sin embargo, servicios de terceros integrados en el Juego pueden recopilar informaci&#243;n autom&#225;ticamente:</p>
+
+<h3>2.1 Google AdMob (Publicidad)</h3>
+<p>AdMob puede recopilar:</p>
+<ul>
+<li>Identificador de publicidad del dispositivo (Ad ID)</li>
+<li>Direcci&#243;n IP</li>
+<li>Informaci&#243;n del dispositivo (modelo, SO, pantalla)</li>
+<li>Ubicaci&#243;n aproximada (derivada de la IP)</li>
+<li>Datos de uso e interacci&#243;n con anuncios</li>
+</ul>
+<p>Consulta la <a href="https://policies.google.com/privacy">Pol&#237;tica de Privacidad de Google</a>.</p>
+
+<h3>2.2 Firebase Crashlytics (Informes de errores)</h3>
+<p>Crashlytics puede recopilar:</p>
+<ul>
+<li>ID de sesi&#243;n an&#243;nimo (generado aleatoriamente)</li>
+<li>Modelo y fabricante del dispositivo</li>
+<li>Versi&#243;n del sistema operativo</li>
+<li>Versi&#243;n de la aplicaci&#243;n</li>
+<li>Trazas de errores y registros</li>
+</ul>
+<p><strong>No se recopila informaci&#243;n personal identificable.</strong></p>
+
+<h3>2.3 Google Analytics para Firebase</h3>
+<p>Analytics puede recopilar:</p>
+<ul>
+<li>ID de sesi&#243;n an&#243;nimo</li>
+<li>Eventos de la app (inicio de sesi&#243;n, nivel completado, interacciones con anuncios)</li>
+<li>Tipo de dispositivo y versi&#243;n del SO</li>
+<li>Pa&#237;s e idioma</li>
+</ul>
+<p><strong>No se recopila informaci&#243;n personal.</strong> Los datos se almacenan en la UE.</p>
+
+<h2>3. C&#243;mo se usa la informaci&#243;n</h2>
+<ul>
+<li><strong>Publicidad:</strong> Para mostrar anuncios y medir rendimiento</li>
+<li><strong>An&#225;lisis:</strong> Para entender patrones de uso y mejorar el Juego</li>
+<li><strong>Informes de errores:</strong> Para identificar y corregir fallos</li>
+</ul>
+
+<h2>4. Anuncios personalizados vs. no personalizados</h2>
+<p>Al iniciar por primera vez, eliges entre anuncios personalizados y no personalizados. Puedes cambiarlo en Ajustes > "Preferencias de anuncios".</p>
+
+<h2>5. Almacenamiento de datos</h2>
+<p>Todo el progreso se almacena localmente en tu dispositivo. Nunca se transmite a ning&#250;n servidor. Desinstalar el Juego elimina todos los datos locales.</p>
+
+<h2>6. Privacidad de menores</h2>
+<p>El Juego est&#225; dise&#241;ado para audiencias generales. No recopilamos intencionadamente informaci&#243;n de menores de 13 a&#241;os (o 16 en el EEE).</p>
+
+<h2>7. Tus derechos (RGPD / CCPA / LGPD)</h2>
+<p>Puedes tener derecho a: acceso, eliminaci&#243;n, exclusi&#243;n de anuncios personalizados, portabilidad y rectificaci&#243;n de tus datos. Cont&#225;ctanos para ejercer estos derechos.</p>
+
+<h2>8. Permisos del dispositivo</h2>
+<ul>
+<li><strong>INTERNET:</strong> Necesario para los anuncios</li>
+<li><strong>AD_ID:</strong> Requerido por Google AdMob</li>
+</ul>
+
+<h2>9. Servicios de terceros</h2>
+<table><tr><th>Servicio</th><th>Prop&#243;sito</th><th>Pol&#237;tica de privacidad</th></tr>
+<tr><td>Google AdMob</td><td>Publicidad</td><td><a href="https://policies.google.com/privacy">Enlace</a></td></tr>
+<tr><td>Firebase Crashlytics</td><td>Informes de errores</td><td><a href="https://firebase.google.com/support/privacy">Enlace</a></td></tr>
+<tr><td>Google Analytics</td><td>An&#225;lisis</td><td><a href="https://policies.google.com/privacy">Enlace</a></td></tr></table>
+
+<h2>10. Cambios en esta pol&#237;tica</h2>
+<p>Podemos actualizar esta pol&#237;tica. La fecha de "&#218;ltima actualizaci&#243;n" reflejar&#225; los cambios.</p>
+
+<h2>11. Contacto</h2>
+<p><strong>Email:</strong> farmfurygames@gmail.com</p>
+<p><em>Incluye "Farm Fury Privacy" en el asunto.</em></p>
+</div>
+
+<!-- ═══ FRENCH ═══ -->
+<div class="policy-section" id="lang-fr">
+<h1>Farm Fury - Politique de Confidentialit&#233;</h1>
+<p class="updated">Derni&#232;re mise &#224; jour : 3 avril 2026</p>
+
+<h2>1. Introduction</h2>
+<p>Cette politique de confidentialit&#233; explique comment "Farm Fury — Last Beast Standing" ("le Jeu") g&#232;re les informations lorsque vous utilisez notre application mobile. Nous nous engageons &#224; prot&#233;ger votre vie priv&#233;e.</p>
+
+<h2>2. Informations collect&#233;es</h2>
+<p><strong>Nous ne collectons aucune information personnelle directement.</strong> Le Jeu ne n&#233;cessite pas de cr&#233;ation de compte ni de saisie de donn&#233;es personnelles. Toute la progression est stock&#233;e localement sur votre appareil.</p>
+<p>Cependant, des services tiers int&#233;gr&#233;s au Jeu peuvent collecter automatiquement certaines informations :</p>
+
+<h3>2.1 Google AdMob (Publicit&#233;)</h3>
+<ul>
+<li>Identifiant publicitaire de l'appareil (Ad ID)</li>
+<li>Adresse IP</li>
+<li>Informations sur l'appareil (mod&#232;le, SE, &#233;cran)</li>
+<li>Localisation approximative (d&#233;riv&#233;e de l'IP)</li>
+<li>Donn&#233;es d'utilisation et interaction avec les publicit&#233;s</li>
+</ul>
+<p>Voir la <a href="https://policies.google.com/privacy">Politique de Confidentialit&#233; de Google</a>.</p>
+
+<h3>2.2 Firebase Crashlytics (Rapports de plantage)</h3>
+<ul>
+<li>ID de session anonyme (g&#233;n&#233;r&#233; al&#233;atoirement)</li>
+<li>Mod&#232;le et fabricant de l'appareil</li>
+<li>Version du syst&#232;me d'exploitation</li>
+<li>Version de l'application</li>
+<li>Traces d'erreurs et journaux</li>
+</ul>
+<p><strong>Aucune information personnellement identifiable n'est collect&#233;e.</strong></p>
+
+<h3>2.3 Google Analytics pour Firebase</h3>
+<ul>
+<li>ID de session anonyme</li>
+<li>&#201;v&#233;nements de l'app (d&#233;but de session, niveau compl&#233;t&#233;, interactions publicitaires)</li>
+<li>Type d'appareil et version du SE</li>
+<li>Pays et param&#232;tres de langue</li>
+</ul>
+<p><strong>Aucune information personnelle n'est collect&#233;e.</strong> Donn&#233;es stock&#233;es dans l'UE.</p>
+
+<h2>3. Utilisation des informations</h2>
+<ul>
+<li><strong>Publicit&#233; :</strong> Afficher des annonces et mesurer leur performance</li>
+<li><strong>Analytique :</strong> Comprendre les habitudes d'utilisation et am&#233;liorer le Jeu</li>
+<li><strong>Rapports de plantage :</strong> Identifier et corriger les bugs</li>
+</ul>
+
+<h2>4. Publicit&#233;s personnalis&#233;es vs. non personnalis&#233;es</h2>
+<p>Au premier lancement, vous choisissez entre publicit&#233;s personnalis&#233;es et non personnalis&#233;es. Modifiable &#224; tout moment dans Param&#232;tres > "Pr&#233;f&#233;rences publicitaires".</p>
+
+<h2>5. Stockage des donn&#233;es</h2>
+<p>Toute la progression est stock&#233;e localement. Rien n'est transmis &#224; un serveur. La d&#233;sinstallation supprime toutes les donn&#233;es locales.</p>
+
+<h2>6. Vie priv&#233;e des enfants</h2>
+<p>Le Jeu est con&#231;u pour un public g&#233;n&#233;ral. Nous ne collectons pas sciemment d'informations sur les enfants de moins de 13 ans (ou 16 dans l'EEE).</p>
+
+<h2>7. Vos droits (RGPD / CCPA / LGPD)</h2>
+<p>Vous pouvez avoir le droit d'acc&#233;der, supprimer, refuser la personnalisation, &#224; la portabilit&#233; et &#224; la rectification de vos donn&#233;es. Contactez-nous pour exercer ces droits.</p>
+
+<h2>8. Permissions</h2>
+<ul>
+<li><strong>INTERNET :</strong> N&#233;cessaire pour les publicit&#233;s</li>
+<li><strong>AD_ID :</strong> Requis par Google AdMob</li>
+</ul>
+
+<h2>9. Services tiers</h2>
+<table><tr><th>Service</th><th>Objectif</th><th>Politique</th></tr>
+<tr><td>Google AdMob</td><td>Publicit&#233;</td><td><a href="https://policies.google.com/privacy">Lien</a></td></tr>
+<tr><td>Firebase Crashlytics</td><td>Rapports</td><td><a href="https://firebase.google.com/support/privacy">Lien</a></td></tr>
+<tr><td>Google Analytics</td><td>Analytique</td><td><a href="https://policies.google.com/privacy">Lien</a></td></tr></table>
+
+<h2>10. Modifications</h2>
+<p>Nous pouvons mettre &#224; jour cette politique. La date de mise &#224; jour refl&#233;tera les changements.</p>
+
+<h2>11. Contact</h2>
+<p><strong>Email :</strong> farmfurygames@gmail.com</p>
+<p><em>Veuillez inclure "Farm Fury Privacy" dans l'objet.</em></p>
+</div>
+
+<!-- ═══ PORTUGUESE ═══ -->
+<div class="policy-section" id="lang-pt">
+<h1>Farm Fury - Pol&#237;tica de Privacidade</h1>
+<p class="updated">&#218;ltima atualiza&#231;&#227;o: 3 de abril de 2026</p>
+
+<h2>1. Introdu&#231;&#227;o</h2>
+<p>Esta pol&#237;tica de privacidade explica como "Farm Fury — Last Beast Standing" ("o Jogo") lida com informa&#231;&#245;es quando voc&#234; usa nosso aplicativo m&#243;vel. Estamos comprometidos em proteger sua privacidade.</p>
+
+<h2>2. Informa&#231;&#245;es que coletamos</h2>
+<p><strong>N&#227;o coletamos informa&#231;&#245;es pessoais diretamente.</strong> O Jogo n&#227;o requer cria&#231;&#227;o de conta, login ou entrada de dados pessoais. Todo o progresso &#233; armazenado localmente no seu dispositivo.</p>
+<p>No entanto, servi&#231;os de terceiros integrados ao Jogo podem coletar informa&#231;&#245;es automaticamente:</p>
+
+<h3>2.1 Google AdMob (Publicidade)</h3>
+<ul><li>Identificador de publicidade (Ad ID)</li><li>Endere&#231;o IP</li><li>Informa&#231;&#245;es do dispositivo</li><li>Localiza&#231;&#227;o aproximada</li><li>Dados de uso e intera&#231;&#227;o com an&#250;ncios</li></ul>
+
+<h3>2.2 Firebase Crashlytics</h3>
+<ul><li>ID de sess&#227;o an&#244;nimo</li><li>Modelo do dispositivo</li><li>Vers&#227;o do SO</li><li>Vers&#227;o do app</li><li>Logs de erro</li></ul>
+<p><strong>Nenhuma informa&#231;&#227;o pessoalmente identific&#225;vel &#233; coletada.</strong></p>
+
+<h3>2.3 Google Analytics para Firebase</h3>
+<ul><li>ID de sess&#227;o an&#244;nimo</li><li>Eventos do app</li><li>Tipo de dispositivo</li><li>Pa&#237;s e idioma</li></ul>
+
+<h2>3. Uso das informa&#231;&#245;es</h2>
+<ul><li><strong>Publicidade:</strong> Exibir an&#250;ncios</li><li><strong>An&#225;lise:</strong> Melhorar o Jogo</li><li><strong>Relat&#243;rios de falhas:</strong> Corrigir erros</li></ul>
+
+<h2>4. An&#250;ncios personalizados vs. n&#227;o personalizados</h2>
+<p>No primeiro lan&#231;amento, voc&#234; escolhe entre an&#250;ncios personalizados e n&#227;o personalizados. Alter&#225;vel em Configura&#231;&#245;es > "Prefer&#234;ncias de an&#250;ncios".</p>
+
+<h2>5. Armazenamento</h2>
+<p>Progresso armazenado localmente. Nunca transmitido a servidores. Desinstalar apaga tudo.</p>
+
+<h2>6. Privacidade de crian&#231;as</h2>
+<p>O Jogo &#233; para p&#250;blico geral. N&#227;o coletamos dados de menores de 13 anos (ou 16 no EEE).</p>
+
+<h2>7. Seus direitos (LGPD / GDPR / CCPA)</h2>
+<p>Voc&#234; pode ter direito a: acesso, exclus&#227;o, recusa de personaliza&#231;&#227;o, portabilidade e retifica&#231;&#227;o. Entre em contato conosco.</p>
+
+<h2>8. Permiss&#245;es</h2>
+<ul><li><strong>INTERNET:</strong> Necess&#225;rio para an&#250;ncios</li><li><strong>AD_ID:</strong> Requerido pelo AdMob</li></ul>
+
+<h2>9. Servi&#231;os de terceiros</h2>
+<table><tr><th>Servi&#231;o</th><th>Finalidade</th><th>Pol&#237;tica</th></tr>
+<tr><td>Google AdMob</td><td>Publicidade</td><td><a href="https://policies.google.com/privacy">Link</a></td></tr>
+<tr><td>Firebase Crashlytics</td><td>Relat&#243;rios</td><td><a href="https://firebase.google.com/support/privacy">Link</a></td></tr>
+<tr><td>Google Analytics</td><td>An&#225;lise</td><td><a href="https://policies.google.com/privacy">Link</a></td></tr></table>
+
+<h2>10. Altera&#231;&#245;es</h2>
+<p>Podemos atualizar esta pol&#237;tica. A data refletir&#225; mudan&#231;as.</p>
+
+<h2>11. Contato</h2>
+<p><strong>Email:</strong> farmfurygames@gmail.com</p>
+<p><em>Inclua "Farm Fury Privacy" no assunto.</em></p>
+</div>
+
+<!-- ═══ CATALAN ═══ -->
+<div class="policy-section" id="lang-ca">
+<h1>Farm Fury - Pol&#237;tica de Privacitat</h1>
+<p class="updated">&#218;ltima actualitzaci&#243;: 3 d'abril de 2026</p>
+
+<h2>1. Introducci&#243;</h2>
+<p>Aquesta pol&#237;tica de privacitat explica com "Farm Fury — Last Beast Standing" ("el Joc") gestiona la informaci&#243; quan fas servir la nostra aplicaci&#243; m&#242;bil. Ens comprometem a protegir la teva privacitat.</p>
+
+<h2>2. Informaci&#243; que recopilem</h2>
+<p><strong>No recopilem cap informaci&#243; personal directament.</strong> El Joc no requereix creaci&#243; de compte ni introducci&#243; de dades personals. Tot el progr&#233;s s'emmagatzema localment al teu dispositiu.</p>
+<p>No obstant, serveis de tercers integrats al Joc poden recopilar informaci&#243; autom&#224;ticament:</p>
+
+<h3>2.1 Google AdMob (Publicitat)</h3>
+<ul><li>Identificador de publicitat (Ad ID)</li><li>Adre&#231;a IP</li><li>Informaci&#243; del dispositiu</li><li>Ubicaci&#243; aproximada</li><li>Dades d'&#250;s i interacci&#243; amb anuncis</li></ul>
+
+<h3>2.2 Firebase Crashlytics</h3>
+<ul><li>ID de sessi&#243; an&#242;nim</li><li>Model del dispositiu</li><li>Versi&#243; del SO</li><li>Versi&#243; de l'app</li><li>Registres d'errors</li></ul>
+<p><strong>No es recull cap informaci&#243; personal identificable.</strong></p>
+
+<h3>2.3 Google Analytics per a Firebase</h3>
+<ul><li>ID de sessi&#243; an&#242;nim</li><li>Esdeveniments de l'app</li><li>Tipus de dispositiu</li><li>Pa&#237;s i idioma</li></ul>
+
+<h2>3. &#218;s de la informaci&#243;</h2>
+<ul><li><strong>Publicitat:</strong> Mostrar anuncis</li><li><strong>An&#224;lisi:</strong> Millorar el Joc</li><li><strong>Informes d'errors:</strong> Corregir errors</li></ul>
+
+<h2>4. Anuncis personalitzats vs. no personalitzats</h2>
+<p>Al primer inici, tries entre anuncis personalitzats i no personalitzats. Canviable a Configuraci&#243; > "Prefer&#232;ncies d'anuncis".</p>
+
+<h2>5. Emmagatzematge</h2>
+<p>Tot el progr&#233;s s'emmagatzema localment. Mai es transmet a cap servidor. Desinstal&#183;lar elimina totes les dades.</p>
+
+<h2>6. Privacitat dels menors</h2>
+<p>El Joc &#233;s per a p&#250;blic general. No recopilem dades de menors de 13 anys (o 16 a l'EEE).</p>
+
+<h2>7. Els teus drets (RGPD / CCPA / LGPD)</h2>
+<p>Pots tenir dret a: acc&#233;s, eliminaci&#243;, exclusi&#243; de personalitzaci&#243;, portabilitat i rectificaci&#243;. Contacta'ns per exercir aquests drets.</p>
+
+<h2>8. Permisos</h2>
+<ul><li><strong>INTERNET:</strong> Necessari per als anuncis</li><li><strong>AD_ID:</strong> Requerit per AdMob</li></ul>
+
+<h2>9. Serveis de tercers</h2>
+<table><tr><th>Servei</th><th>Finalitat</th><th>Pol&#237;tica</th></tr>
+<tr><td>Google AdMob</td><td>Publicitat</td><td><a href="https://policies.google.com/privacy">Enlla&#231;</a></td></tr>
+<tr><td>Firebase Crashlytics</td><td>Informes</td><td><a href="https://firebase.google.com/support/privacy">Enlla&#231;</a></td></tr>
+<tr><td>Google Analytics</td><td>An&#224;lisi</td><td><a href="https://policies.google.com/privacy">Enlla&#231;</a></td></tr></table>
+
+<h2>10. Canvis</h2>
+<p>Podem actualitzar aquesta pol&#237;tica. La data reflectir&#224; els canvis.</p>
+
+<h2>11. Contacte</h2>
+<p><strong>Email:</strong> farmfurygames@gmail.com</p>
+<p><em>Inclou "Farm Fury Privacy" a l'assumpte.</em></p>
+</div>
+
+<!-- ═══ TURKISH ═══ -->
+<div class="policy-section" id="lang-tr">
+<h1>Farm Fury - Gizlilik Politikas&#305;</h1>
+<p class="updated">Son g&#252;ncelleme: 3 Nisan 2026</p>
+
+<h2>1. Giri&#351;</h2>
+<p>Bu gizlilik politikas&#305;, "Farm Fury — Last Beast Standing" ("Oyun") mobil uygulamam&#305;z&#305; kullan&#305;rken bilgilerinizi nas&#305;l y&#246;netti&#287;imizi a&#231;&#305;klar. Gizlili&#287;inizi korumaya kararl&#305;y&#305;z.</p>
+
+<h2>2. Toplanan bilgiler</h2>
+<p><strong>Do&#287;rudan ki&#351;isel bilgi toplamay&#305;z.</strong> Oyun hesap olu&#351;turma veya ki&#351;isel veri giri&#351;i gerektirmez. T&#252;m ilerleme cihaz&#305;n&#305;zda yerel olarak saklan&#305;r.</p>
+<p>Ancak Oyun'a entegre &#252;&#231;&#252;nc&#252; taraf hizmetler otomatik bilgi toplayabilir:</p>
+
+<h3>2.1 Google AdMob (Reklamc&#305;l&#305;k)</h3>
+<ul><li>Reklam kimli&#287;i (Ad ID)</li><li>IP adresi</li><li>Cihaz bilgisi</li><li>Yakla&#351;&#305;k konum</li><li>Uygulama kullan&#305;m verileri</li></ul>
+
+<h3>2.2 Firebase Crashlytics</h3>
+<ul><li>Anonim oturum kimli&#287;i</li><li>Cihaz modeli</li><li>&#304;&#351;letim sistemi s&#252;r&#252;m&#252;</li><li>Uygulama s&#252;r&#252;m&#252;</li><li>Hata g&#252;nl&#252;kleri</li></ul>
+<p><strong>Ki&#351;isel olarak tan&#305;mlanabilir bilgi toplanmaz.</strong></p>
+
+<h3>2.3 Google Analytics</h3>
+<ul><li>Anonim oturum kimli&#287;i</li><li>Uygulama olaylar&#305;</li><li>Cihaz t&#252;r&#252;</li><li>&#220;lke ve dil</li></ul>
+
+<h2>3. Bilgilerin kullan&#305;m&#305;</h2>
+<ul><li><strong>Reklamc&#305;l&#305;k:</strong> Reklam g&#246;sterme</li><li><strong>Analitik:</strong> Oyunu geli&#351;tirme</li><li><strong>&#199;&#246;kme raporlar&#305;:</strong> Hatalar&#305; d&#252;zeltme</li></ul>
+
+<h2>4. Ki&#351;iselle&#351;tirilmi&#351; vs. ki&#351;iselle&#351;tirilmemi&#351; reklamlar</h2>
+<p>&#304;lk ba&#351;lat&#305;mda se&#231;im yapar, Ayarlar'dan de&#287;i&#351;tirebilirsiniz.</p>
+
+<h2>5. Veri depolama</h2>
+<p>&#304;lerleme yerel olarak saklan&#305;r. Sunuculara iletilmez. Kald&#305;rma t&#252;m verileri siler.</p>
+
+<h2>6. &#199;ocuklar&#305;n gizlili&#287;i</h2>
+<p>Oyun genel kitle i&#231;indir. 13 ya&#351;&#305;n alt&#305;ndakilerden (AEA'da 16) bilerek bilgi toplamay&#305;z.</p>
+
+<h2>7. Haklar&#305;n&#305;z (KVKK / GDPR)</h2>
+<p>Eri&#351;im, silme, ki&#351;iselle&#351;tirmeden &#231;&#305;kma, ta&#351;&#305;nabilirlik ve d&#252;zeltme hakk&#305;na sahip olabilirsiniz. Bizimle ileti&#351;ime ge&#231;in.</p>
+
+<h2>8. &#304;zinler</h2>
+<ul><li><strong>INTERNET:</strong> Reklamlar i&#231;in gerekli</li><li><strong>AD_ID:</strong> AdMob i&#231;in gerekli</li></ul>
+
+<h2>9. &#220;&#231;&#252;nc&#252; taraf hizmetler</h2>
+<table><tr><th>Hizmet</th><th>Ama&#231;</th><th>Politika</th></tr>
+<tr><td>Google AdMob</td><td>Reklam</td><td><a href="https://policies.google.com/privacy">Ba&#287;lant&#305;</a></td></tr>
+<tr><td>Firebase Crashlytics</td><td>Raporlar</td><td><a href="https://firebase.google.com/support/privacy">Ba&#287;lant&#305;</a></td></tr>
+<tr><td>Google Analytics</td><td>Analitik</td><td><a href="https://policies.google.com/privacy">Ba&#287;lant&#305;</a></td></tr></table>
+
+<h2>10. De&#287;i&#351;iklikler</h2>
+<p>Bu politikay&#305; g&#252;ncelleyebiliriz. Tarih de&#287;i&#351;iklikleri yans&#305;tacakt&#305;r.</p>
+
+<h2>11. &#304;leti&#351;im</h2>
+<p><strong>E-posta:</strong> farmfurygames@gmail.com</p>
+<p><em>Konu sat&#305;r&#305;na "Farm Fury Privacy" ekleyin.</em></p>
+</div>
+
+<!-- ═══ RUSSIAN ═══ -->
+<div class="policy-section" id="lang-ru">
+<h1>Farm Fury - &#1055;&#1086;&#1083;&#1080;&#1090;&#1080;&#1082;&#1072; &#1082;&#1086;&#1085;&#1092;&#1080;&#1076;&#1077;&#1085;&#1094;&#1080;&#1072;&#1083;&#1100;&#1085;&#1086;&#1089;&#1090;&#1080;</h1>
+<p class="updated">&#1055;&#1086;&#1089;&#1083;&#1077;&#1076;&#1085;&#1077;&#1077; &#1086;&#1073;&#1085;&#1086;&#1074;&#1083;&#1077;&#1085;&#1080;&#1077;: 3 &#1072;&#1087;&#1088;&#1077;&#1083;&#1103; 2026</p>
+
+<h2>1. &#1042;&#1074;&#1077;&#1076;&#1077;&#1085;&#1080;&#1077;</h2>
+<p>&#1069;&#1090;&#1072; &#1087;&#1086;&#1083;&#1080;&#1090;&#1080;&#1082;&#1072; &#1082;&#1086;&#1085;&#1092;&#1080;&#1076;&#1077;&#1085;&#1094;&#1080;&#1072;&#1083;&#1100;&#1085;&#1086;&#1089;&#1090;&#1080; &#1086;&#1073;&#1098;&#1103;&#1089;&#1085;&#1103;&#1077;&#1090;, &#1082;&#1072;&#1082; "Farm Fury — Last Beast Standing" ("&#1048;&#1075;&#1088;&#1072;") &#1086;&#1073;&#1088;&#1072;&#1073;&#1072;&#1090;&#1099;&#1074;&#1072;&#1077;&#1090; &#1080;&#1085;&#1092;&#1086;&#1088;&#1084;&#1072;&#1094;&#1080;&#1102; &#1087;&#1088;&#1080; &#1080;&#1089;&#1087;&#1086;&#1083;&#1100;&#1079;&#1086;&#1074;&#1072;&#1085;&#1080;&#1080; &#1085;&#1072;&#1096;&#1077;&#1075;&#1086; &#1084;&#1086;&#1073;&#1080;&#1083;&#1100;&#1085;&#1086;&#1075;&#1086; &#1087;&#1088;&#1080;&#1083;&#1086;&#1078;&#1077;&#1085;&#1080;&#1103;.</p>
+
+<h2>2. &#1057;&#1086;&#1073;&#1080;&#1088;&#1072;&#1077;&#1084;&#1072;&#1103; &#1080;&#1085;&#1092;&#1086;&#1088;&#1084;&#1072;&#1094;&#1080;&#1103;</h2>
+<p><strong>&#1052;&#1099; &#1085;&#1077; &#1089;&#1086;&#1073;&#1080;&#1088;&#1072;&#1077;&#1084; &#1083;&#1080;&#1095;&#1085;&#1091;&#1102; &#1080;&#1085;&#1092;&#1086;&#1088;&#1084;&#1072;&#1094;&#1080;&#1102; &#1085;&#1072;&#1087;&#1088;&#1103;&#1084;&#1091;&#1102;.</strong> &#1048;&#1075;&#1088;&#1072; &#1085;&#1077; &#1090;&#1088;&#1077;&#1073;&#1091;&#1077;&#1090; &#1089;&#1086;&#1079;&#1076;&#1072;&#1085;&#1080;&#1103; &#1072;&#1082;&#1082;&#1072;&#1091;&#1085;&#1090;&#1072;. &#1042;&#1077;&#1089;&#1100; &#1087;&#1088;&#1086;&#1075;&#1088;&#1077;&#1089;&#1089; &#1093;&#1088;&#1072;&#1085;&#1080;&#1090;&#1089;&#1103; &#1083;&#1086;&#1082;&#1072;&#1083;&#1100;&#1085;&#1086; &#1085;&#1072; &#1074;&#1072;&#1096;&#1077;&#1084; &#1091;&#1089;&#1090;&#1088;&#1086;&#1081;&#1089;&#1090;&#1074;&#1077;.</p>
+<p>&#1054;&#1076;&#1085;&#1072;&#1082;&#1086; &#1089;&#1090;&#1086;&#1088;&#1086;&#1085;&#1085;&#1080;&#1077; &#1089;&#1077;&#1088;&#1074;&#1080;&#1089;&#1099; &#1084;&#1086;&#1075;&#1091;&#1090; &#1072;&#1074;&#1090;&#1086;&#1084;&#1072;&#1090;&#1080;&#1095;&#1077;&#1089;&#1082;&#1080; &#1089;&#1086;&#1073;&#1080;&#1088;&#1072;&#1090;&#1100; &#1080;&#1085;&#1092;&#1086;&#1088;&#1084;&#1072;&#1094;&#1080;&#1102;:</p>
+
+<h3>2.1 Google AdMob (&#1056;&#1077;&#1082;&#1083;&#1072;&#1084;&#1072;)</h3>
+<ul><li>&#1056;&#1077;&#1082;&#1083;&#1072;&#1084;&#1085;&#1099;&#1081; &#1080;&#1076;&#1077;&#1085;&#1090;&#1080;&#1092;&#1080;&#1082;&#1072;&#1090;&#1086;&#1088; (Ad ID)</li><li>IP-&#1072;&#1076;&#1088;&#1077;&#1089;</li><li>&#1048;&#1085;&#1092;&#1086;&#1088;&#1084;&#1072;&#1094;&#1080;&#1103; &#1086;&#1073; &#1091;&#1089;&#1090;&#1088;&#1086;&#1081;&#1089;&#1090;&#1074;&#1077;</li><li>&#1055;&#1088;&#1080;&#1073;&#1083;&#1080;&#1079;&#1080;&#1090;&#1077;&#1083;&#1100;&#1085;&#1086;&#1077; &#1084;&#1077;&#1089;&#1090;&#1086;&#1087;&#1086;&#1083;&#1086;&#1078;&#1077;&#1085;&#1080;&#1077;</li><li>&#1044;&#1072;&#1085;&#1085;&#1099;&#1077; &#1080;&#1089;&#1087;&#1086;&#1083;&#1100;&#1079;&#1086;&#1074;&#1072;&#1085;&#1080;&#1103;</li></ul>
+
+<h3>2.2 Firebase Crashlytics</h3>
+<ul><li>&#1040;&#1085;&#1086;&#1085;&#1080;&#1084;&#1085;&#1099;&#1081; ID &#1089;&#1077;&#1089;&#1089;&#1080;&#1080;</li><li>&#1052;&#1086;&#1076;&#1077;&#1083;&#1100; &#1091;&#1089;&#1090;&#1088;&#1086;&#1081;&#1089;&#1090;&#1074;&#1072;</li><li>&#1042;&#1077;&#1088;&#1089;&#1080;&#1103; &#1054;&#1057;</li><li>&#1042;&#1077;&#1088;&#1089;&#1080;&#1103; &#1087;&#1088;&#1080;&#1083;&#1086;&#1078;&#1077;&#1085;&#1080;&#1103;</li><li>&#1046;&#1091;&#1088;&#1085;&#1072;&#1083;&#1099; &#1086;&#1096;&#1080;&#1073;&#1086;&#1082;</li></ul>
+<p><strong>&#1051;&#1080;&#1095;&#1085;&#1072;&#1103; &#1080;&#1085;&#1092;&#1086;&#1088;&#1084;&#1072;&#1094;&#1080;&#1103; &#1085;&#1077; &#1089;&#1086;&#1073;&#1080;&#1088;&#1072;&#1077;&#1090;&#1089;&#1103;.</strong></p>
+
+<h3>2.3 Google Analytics</h3>
+<ul><li>&#1040;&#1085;&#1086;&#1085;&#1080;&#1084;&#1085;&#1099;&#1081; ID &#1089;&#1077;&#1089;&#1089;&#1080;&#1080;</li><li>&#1057;&#1086;&#1073;&#1099;&#1090;&#1080;&#1103; &#1087;&#1088;&#1080;&#1083;&#1086;&#1078;&#1077;&#1085;&#1080;&#1103;</li><li>&#1058;&#1080;&#1087; &#1091;&#1089;&#1090;&#1088;&#1086;&#1081;&#1089;&#1090;&#1074;&#1072;</li><li>&#1057;&#1090;&#1088;&#1072;&#1085;&#1072; &#1080; &#1103;&#1079;&#1099;&#1082;</li></ul>
+
+<h2>3. &#1048;&#1089;&#1087;&#1086;&#1083;&#1100;&#1079;&#1086;&#1074;&#1072;&#1085;&#1080;&#1077; &#1080;&#1085;&#1092;&#1086;&#1088;&#1084;&#1072;&#1094;&#1080;&#1080;</h2>
+<ul><li><strong>&#1056;&#1077;&#1082;&#1083;&#1072;&#1084;&#1072;:</strong> &#1055;&#1086;&#1082;&#1072;&#1079; &#1088;&#1077;&#1082;&#1083;&#1072;&#1084;&#1099;</li><li><strong>&#1040;&#1085;&#1072;&#1083;&#1080;&#1090;&#1080;&#1082;&#1072;:</strong> &#1059;&#1083;&#1091;&#1095;&#1096;&#1077;&#1085;&#1080;&#1077; &#1048;&#1075;&#1088;&#1099;</li><li><strong>&#1054;&#1090;&#1095;&#1105;&#1090;&#1099; &#1086;&#1073; &#1086;&#1096;&#1080;&#1073;&#1082;&#1072;&#1093;:</strong> &#1048;&#1089;&#1087;&#1088;&#1072;&#1074;&#1083;&#1077;&#1085;&#1080;&#1077; &#1089;&#1073;&#1086;&#1077;&#1074;</li></ul>
+
+<h2>4. &#1055;&#1077;&#1088;&#1089;&#1086;&#1085;&#1072;&#1083;&#1080;&#1079;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1085;&#1072;&#1103; &#1074;&#1089;. &#1085;&#1077;&#1087;&#1077;&#1088;&#1089;&#1086;&#1085;&#1072;&#1083;&#1080;&#1079;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1085;&#1072;&#1103; &#1088;&#1077;&#1082;&#1083;&#1072;&#1084;&#1072;</h2>
+<p>&#1055;&#1088;&#1080; &#1087;&#1077;&#1088;&#1074;&#1086;&#1084; &#1079;&#1072;&#1087;&#1091;&#1089;&#1082;&#1077; &#1074;&#1099; &#1074;&#1099;&#1073;&#1080;&#1088;&#1072;&#1077;&#1090;&#1077; &#1090;&#1080;&#1087; &#1088;&#1077;&#1082;&#1083;&#1072;&#1084;&#1099;. &#1048;&#1079;&#1084;&#1077;&#1085;&#1080;&#1090;&#1100; &#1084;&#1086;&#1078;&#1085;&#1086; &#1074; &#1053;&#1072;&#1089;&#1090;&#1088;&#1086;&#1081;&#1082;&#1072;&#1093;.</p>
+
+<h2>5. &#1061;&#1088;&#1072;&#1085;&#1077;&#1085;&#1080;&#1077; &#1076;&#1072;&#1085;&#1085;&#1099;&#1093;</h2>
+<p>&#1055;&#1088;&#1086;&#1075;&#1088;&#1077;&#1089;&#1089; &#1093;&#1088;&#1072;&#1085;&#1080;&#1090;&#1089;&#1103; &#1083;&#1086;&#1082;&#1072;&#1083;&#1100;&#1085;&#1086;. &#1053;&#1080;&#1082;&#1086;&#1075;&#1076;&#1072; &#1085;&#1077; &#1087;&#1077;&#1088;&#1077;&#1076;&#1072;&#1105;&#1090;&#1089;&#1103; &#1085;&#1072; &#1089;&#1077;&#1088;&#1074;&#1077;&#1088;&#1099;. &#1059;&#1076;&#1072;&#1083;&#1077;&#1085;&#1080;&#1077; &#1080;&#1075;&#1088;&#1099; &#1089;&#1090;&#1080;&#1088;&#1072;&#1077;&#1090; &#1074;&#1089;&#1077; &#1076;&#1072;&#1085;&#1085;&#1099;&#1077;.</p>
+
+<h2>6. &#1050;&#1086;&#1085;&#1092;&#1080;&#1076;&#1077;&#1085;&#1094;&#1080;&#1072;&#1083;&#1100;&#1085;&#1086;&#1089;&#1090;&#1100; &#1076;&#1077;&#1090;&#1077;&#1081;</h2>
+<p>&#1048;&#1075;&#1088;&#1072; &#1076;&#1083;&#1103; &#1096;&#1080;&#1088;&#1086;&#1082;&#1086;&#1081; &#1072;&#1091;&#1076;&#1080;&#1090;&#1086;&#1088;&#1080;&#1080;. &#1052;&#1099; &#1085;&#1077; &#1089;&#1086;&#1073;&#1080;&#1088;&#1072;&#1077;&#1084; &#1076;&#1072;&#1085;&#1085;&#1099;&#1077; &#1076;&#1077;&#1090;&#1077;&#1081; &#1076;&#1086; 13 &#1083;&#1077;&#1090; (&#1080;&#1083;&#1080; 16 &#1074; &#1045;&#1069;&#1055;).</p>
+
+<h2>7. &#1042;&#1072;&#1096;&#1080; &#1087;&#1088;&#1072;&#1074;&#1072;</h2>
+<p>&#1042;&#1099; &#1084;&#1086;&#1078;&#1077;&#1090;&#1077; &#1080;&#1084;&#1077;&#1090;&#1100; &#1087;&#1088;&#1072;&#1074;&#1086; &#1085;&#1072;: &#1076;&#1086;&#1089;&#1090;&#1091;&#1087;, &#1091;&#1076;&#1072;&#1083;&#1077;&#1085;&#1080;&#1077;, &#1086;&#1090;&#1082;&#1072;&#1079; &#1086;&#1090; &#1087;&#1077;&#1088;&#1089;&#1086;&#1085;&#1072;&#1083;&#1080;&#1079;&#1072;&#1094;&#1080;&#1080;, &#1087;&#1077;&#1088;&#1077;&#1085;&#1086;&#1089;&#1080;&#1084;&#1086;&#1089;&#1090;&#1100; &#1080; &#1080;&#1089;&#1087;&#1088;&#1072;&#1074;&#1083;&#1077;&#1085;&#1080;&#1077;. &#1057;&#1074;&#1103;&#1078;&#1080;&#1090;&#1077;&#1089;&#1100; &#1089; &#1085;&#1072;&#1084;&#1080;.</p>
+
+<h2>8. &#1056;&#1072;&#1079;&#1088;&#1077;&#1096;&#1077;&#1085;&#1080;&#1103;</h2>
+<ul><li><strong>INTERNET:</strong> &#1044;&#1083;&#1103; &#1088;&#1077;&#1082;&#1083;&#1072;&#1084;&#1099;</li><li><strong>AD_ID:</strong> &#1044;&#1083;&#1103; AdMob</li></ul>
+
+<h2>9. &#1057;&#1090;&#1086;&#1088;&#1086;&#1085;&#1085;&#1080;&#1077; &#1089;&#1077;&#1088;&#1074;&#1080;&#1089;&#1099;</h2>
+<table><tr><th>&#1057;&#1077;&#1088;&#1074;&#1080;&#1089;</th><th>&#1062;&#1077;&#1083;&#1100;</th><th>&#1055;&#1086;&#1083;&#1080;&#1090;&#1080;&#1082;&#1072;</th></tr>
+<tr><td>Google AdMob</td><td>&#1056;&#1077;&#1082;&#1083;&#1072;&#1084;&#1072;</td><td><a href="https://policies.google.com/privacy">&#1057;&#1089;&#1099;&#1083;&#1082;&#1072;</a></td></tr>
+<tr><td>Firebase Crashlytics</td><td>&#1054;&#1090;&#1095;&#1105;&#1090;&#1099;</td><td><a href="https://firebase.google.com/support/privacy">&#1057;&#1089;&#1099;&#1083;&#1082;&#1072;</a></td></tr>
+<tr><td>Google Analytics</td><td>&#1040;&#1085;&#1072;&#1083;&#1080;&#1090;&#1080;&#1082;&#1072;</td><td><a href="https://policies.google.com/privacy">&#1057;&#1089;&#1099;&#1083;&#1082;&#1072;</a></td></tr></table>
+
+<h2>10. &#1048;&#1079;&#1084;&#1077;&#1085;&#1077;&#1085;&#1080;&#1103;</h2>
+<p>&#1052;&#1099; &#1084;&#1086;&#1078;&#1077;&#1084; &#1086;&#1073;&#1085;&#1086;&#1074;&#1080;&#1090;&#1100; &#1101;&#1090;&#1091; &#1087;&#1086;&#1083;&#1080;&#1090;&#1080;&#1082;&#1091;. &#1044;&#1072;&#1090;&#1072; &#1086;&#1090;&#1088;&#1072;&#1079;&#1080;&#1090; &#1080;&#1079;&#1084;&#1077;&#1085;&#1077;&#1085;&#1080;&#1103;.</p>
+
+<h2>11. &#1050;&#1086;&#1085;&#1090;&#1072;&#1082;&#1090;&#1099;</h2>
+<p><strong>Email:</strong> farmfurygames@gmail.com</p>
+<p><em>&#1059;&#1082;&#1072;&#1078;&#1080;&#1090;&#1077; "Farm Fury Privacy" &#1074; &#1090;&#1077;&#1084;&#1077; &#1087;&#1080;&#1089;&#1100;&#1084;&#1072;.</em></p>
+</div>
+
+<!-- ═══ HINDI ═══ -->
+<div class="policy-section" id="lang-hi">
+<h1>Farm Fury - &#2327;&#2379;&#2346;&#2344;&#2368;&#2351;&#2340;&#2366; &#2344;&#2368;&#2340;&#2367;</h1>
+<p class="updated">&#2309;&#2306;&#2340;&#2367;&#2350; &#2309;&#2346;&#2337;&#2375;&#2335;: 3 &#2309;&#2346;&#2381;&#2376;&#2354; 2026</p>
+
+<h2>1. &#2346;&#2352;&#2367;&#2330;&#2351;</h2>
+<p>&#2351;&#2361; &#2327;&#2379;&#2346;&#2344;&#2368;&#2351;&#2340;&#2366; &#2344;&#2368;&#2340;&#2367; &#2348;&#2340;&#2366;&#2340;&#2368; &#2361;&#2376; &#2325;&#2367; "Farm Fury — Last Beast Standing" ("&#2327;&#2375;&#2350;") &#2361;&#2350;&#2366;&#2352;&#2375; &#2350;&#2379;&#2348;&#2366;&#2311;&#2354; &#2319;&#2346;&#2381;&#2354;&#2367;&#2325;&#2375;&#2358;&#2344; &#2325;&#2366; &#2313;&#2346;&#2351;&#2379;&#2327; &#2325;&#2352;&#2340;&#2375; &#2360;&#2350;&#2351; &#2332;&#2366;&#2344;&#2325;&#2366;&#2352;&#2368; &#2325;&#2376;&#2360;&#2375; &#2360;&#2306;&#2349;&#2366;&#2354;&#2340;&#2366; &#2361;&#2376;&#2404;</p>
+
+<h2>2. &#2361;&#2350; &#2325;&#2381;&#2351;&#2366; &#2332;&#2366;&#2344;&#2325;&#2366;&#2352;&#2368; &#2319;&#2325;&#2340;&#2381;&#2352; &#2325;&#2352;&#2340;&#2375; &#2361;&#2376;&#2306;</h2>
+<p><strong>&#2361;&#2350; &#2360;&#2368;&#2343;&#2375; &#2325;&#2379;&#2312; &#2357;&#2381;&#2351;&#2325;&#2381;&#2340;&#2367;&#2327;&#2340; &#2332;&#2366;&#2344;&#2325;&#2366;&#2352;&#2368; &#2344;&#2361;&#2368;&#2306; &#2319;&#2325;&#2340;&#2381;&#2352; &#2325;&#2352;&#2340;&#2375;&#2404;</strong> &#2327;&#2375;&#2350; &#2350;&#2375;&#2306; &#2326;&#2366;&#2340;&#2366; &#2348;&#2344;&#2366;&#2344;&#2375; &#2325;&#2368; &#2332;&#2352;&#2370;&#2352;&#2340; &#2344;&#2361;&#2368;&#2306; &#2361;&#2376;&#2404; &#2360;&#2349;&#2368; &#2346;&#2381;&#2352;&#2327;&#2340;&#2367; &#2310;&#2346;&#2325;&#2375; &#2337;&#2367;&#2357;&#2366;&#2311;&#2360; &#2346;&#2352; &#2360;&#2381;&#2341;&#2366;&#2344;&#2368;&#2351; &#2352;&#2370;&#2346; &#2360;&#2375; &#2360;&#2306;&#2327;&#2381;&#2352;&#2361;&#2368;&#2340; &#2361;&#2379;&#2340;&#2368; &#2361;&#2376;&#2404;</p>
+<p>&#2361;&#2366;&#2354;&#2366;&#2306;&#2325;&#2367;, &#2327;&#2375;&#2350; &#2350;&#2375;&#2306; &#2319;&#2325;&#2368;&#2325;&#2371;&#2340; &#2340;&#2371;&#2340;&#2368;&#2351;-&#2346;&#2325;&#2381;&#2359; &#2360;&#2375;&#2357;&#2366;&#2319;&#2306; &#2360;&#2381;&#2357;&#2330;&#2366;&#2354;&#2367;&#2340; &#2352;&#2370;&#2346; &#2360;&#2375; &#2332;&#2366;&#2344;&#2325;&#2366;&#2352;&#2368; &#2319;&#2325;&#2340;&#2381;&#2352; &#2325;&#2352; &#2360;&#2325;&#2340;&#2368; &#2361;&#2376;&#2306;:</p>
+
+<h3>2.1 Google AdMob (&#2357;&#2367;&#2332;&#2381;&#2334;&#2366;&#2346;&#2344;)</h3>
+<ul><li>&#2337;&#2367;&#2357;&#2366;&#2311;&#2360; &#2357;&#2367;&#2332;&#2381;&#2334;&#2366;&#2346;&#2344; ID</li><li>IP &#2346;&#2340;&#2366;</li><li>&#2337;&#2367;&#2357;&#2366;&#2311;&#2360; &#2332;&#2366;&#2344;&#2325;&#2366;&#2352;&#2368;</li><li>&#2309;&#2344;&#2369;&#2350;&#2366;&#2344;&#2367;&#2340; &#2360;&#2381;&#2341;&#2366;&#2344;</li><li>&#2313;&#2346;&#2351;&#2379;&#2327; &#2337;&#2375;&#2335;&#2366;</li></ul>
+
+<h3>2.2 Firebase Crashlytics</h3>
+<ul><li>&#2309;&#2344;&#2366;&#2350; &#2360;&#2340;&#2381;&#2352; ID</li><li>&#2337;&#2367;&#2357;&#2366;&#2311;&#2360; &#2350;&#2377;&#2337;&#2354;</li><li>OS &#2360;&#2306;&#2360;&#2381;&#2325;&#2352;&#2339;</li><li>&#2319;&#2346;&#2381;&#2346; &#2360;&#2306;&#2360;&#2381;&#2325;&#2352;&#2339;</li><li>&#2340;&#2381;&#2352;&#2369;&#2335;&#2367; &#2354;&#2377;&#2327;</li></ul>
+<p><strong>&#2325;&#2379;&#2312; &#2357;&#2381;&#2351;&#2325;&#2381;&#2340;&#2367;&#2327;&#2340; &#2346;&#2361;&#2330;&#2366;&#2344; &#2351;&#2379;&#2327;&#2381;&#2351; &#2332;&#2366;&#2344;&#2325;&#2366;&#2352;&#2368; &#2319;&#2325;&#2340;&#2381;&#2352; &#2344;&#2361;&#2368;&#2306; &#2325;&#2368; &#2332;&#2366;&#2340;&#2368;&#2404;</strong></p>
+
+<h3>2.3 Google Analytics</h3>
+<ul><li>&#2309;&#2344;&#2366;&#2350; &#2360;&#2340;&#2381;&#2352; ID</li><li>&#2319;&#2346;&#2381;&#2346; &#2311;&#2357;&#2375;&#2306;&#2335;</li><li>&#2337;&#2367;&#2357;&#2366;&#2311;&#2360; &#2346;&#2381;&#2352;&#2325;&#2366;&#2352;</li><li>&#2342;&#2375;&#2358; &#2324;&#2352; &#2349;&#2366;&#2359;&#2366;</li></ul>
+
+<h2>3-11. &#2360;&#2306;&#2346;&#2352;&#2381;&#2325;</h2>
+<p><strong>Email:</strong> farmfurygames@gmail.com</p>
+<p><em>&#2357;&#2367;&#2359;&#2351; &#2350;&#2375;&#2306; "Farm Fury Privacy" &#2354;&#2367;&#2326;&#2375;&#2306;&#2404;</em></p>
+</div>
+
+<!-- ═══ ARABIC ═══ -->
+<div class="policy-section" id="lang-ar" dir="rtl">
+<h1>Farm Fury - &#1587;&#1610;&#1575;&#1587;&#1577; &#1575;&#1604;&#1582;&#1589;&#1608;&#1589;&#1610;&#1577;</h1>
+<p class="updated">&#1570;&#1582;&#1585; &#1578;&#1581;&#1583;&#1610;&#1579;: 3 &#1571;&#1576;&#1585;&#1610;&#1604; 2026</p>
+
+<h2>1. &#1605;&#1602;&#1583;&#1605;&#1577;</h2>
+<p>&#1578;&#1608;&#1590;&#1581; &#1587;&#1610;&#1575;&#1587;&#1577; &#1575;&#1604;&#1582;&#1589;&#1608;&#1589;&#1610;&#1577; &#1607;&#1584;&#1607; &#1603;&#1610;&#1601; &#1610;&#1578;&#1593;&#1575;&#1605;&#1604; "Farm Fury — Last Beast Standing" ("&#1575;&#1604;&#1604;&#1593;&#1576;&#1577;") &#1605;&#1593; &#1575;&#1604;&#1605;&#1593;&#1604;&#1608;&#1605;&#1575;&#1578; &#1593;&#1606;&#1583; &#1575;&#1587;&#1578;&#1582;&#1583;&#1575;&#1605; &#1578;&#1591;&#1576;&#1610;&#1602;&#1606;&#1575;. &#1606;&#1581;&#1606; &#1605;&#1604;&#1578;&#1586;&#1605;&#1608;&#1606; &#1576;&#1581;&#1605;&#1575;&#1610;&#1577; &#1582;&#1589;&#1608;&#1589;&#1610;&#1578;&#1603;.</p>
+
+<h2>2. &#1575;&#1604;&#1605;&#1593;&#1604;&#1608;&#1605;&#1575;&#1578; &#1575;&#1604;&#1578;&#1610; &#1606;&#1580;&#1605;&#1593;&#1607;&#1575;</h2>
+<p><strong>&#1604;&#1575; &#1606;&#1580;&#1605;&#1593; &#1571;&#1610; &#1605;&#1593;&#1604;&#1608;&#1605;&#1575;&#1578; &#1588;&#1582;&#1589;&#1610;&#1577; &#1605;&#1576;&#1575;&#1588;&#1585;&#1577;.</strong> &#1575;&#1604;&#1604;&#1593;&#1576;&#1577; &#1604;&#1575; &#1578;&#1578;&#1591;&#1604;&#1576; &#1573;&#1606;&#1588;&#1575;&#1569; &#1581;&#1587;&#1575;&#1576;. &#1603;&#1604; &#1575;&#1604;&#1578;&#1602;&#1583;&#1605; &#1605;&#1582;&#1586;&#1606; &#1605;&#1581;&#1604;&#1610;&#1611;&#1575; &#1593;&#1604;&#1609; &#1580;&#1607;&#1575;&#1586;&#1603;.</p>
+<p>&#1604;&#1603;&#1606; &#1582;&#1583;&#1605;&#1575;&#1578; &#1575;&#1604;&#1591;&#1585;&#1601; &#1575;&#1604;&#1579;&#1575;&#1604;&#1579; &#1602;&#1583; &#1578;&#1580;&#1605;&#1593; &#1605;&#1593;&#1604;&#1608;&#1605;&#1575;&#1578; &#1578;&#1604;&#1602;&#1575;&#1574;&#1610;&#1611;&#1575;:</p>
+
+<h3>2.1 Google AdMob (&#1573;&#1593;&#1604;&#1575;&#1606;&#1575;&#1578;)</h3>
+<ul><li>&#1605;&#1593;&#1585;&#1601; &#1575;&#1604;&#1573;&#1593;&#1604;&#1575;&#1606;&#1575;&#1578;</li><li>&#1593;&#1606;&#1608;&#1575;&#1606; IP</li><li>&#1605;&#1593;&#1604;&#1608;&#1605;&#1575;&#1578; &#1575;&#1604;&#1580;&#1607;&#1575;&#1586;</li><li>&#1575;&#1604;&#1605;&#1608;&#1602;&#1593; &#1575;&#1604;&#1578;&#1602;&#1585;&#1610;&#1576;&#1610;</li><li>&#1576;&#1610;&#1575;&#1606;&#1575;&#1578; &#1575;&#1604;&#1575;&#1587;&#1578;&#1582;&#1583;&#1575;&#1605;</li></ul>
+
+<h3>2.2 Firebase Crashlytics</h3>
+<ul><li>&#1605;&#1593;&#1585;&#1601; &#1580;&#1604;&#1587;&#1577; &#1605;&#1580;&#1607;&#1608;&#1604;</li><li>&#1591;&#1585;&#1575;&#1586; &#1575;&#1604;&#1580;&#1607;&#1575;&#1586;</li><li>&#1573;&#1589;&#1583;&#1575;&#1585; &#1575;&#1604;&#1606;&#1592;&#1575;&#1605;</li><li>&#1573;&#1589;&#1583;&#1575;&#1585; &#1575;&#1604;&#1578;&#1591;&#1576;&#1610;&#1602;</li><li>&#1587;&#1580;&#1604;&#1575;&#1578; &#1575;&#1604;&#1571;&#1582;&#1591;&#1575;&#1569;</li></ul>
+<p><strong>&#1604;&#1575; &#1610;&#1578;&#1605; &#1580;&#1605;&#1593; &#1571;&#1610; &#1605;&#1593;&#1604;&#1608;&#1605;&#1575;&#1578; &#1588;&#1582;&#1589;&#1610;&#1577;.</strong></p>
+
+<h3>2.3 Google Analytics</h3>
+<ul><li>&#1605;&#1593;&#1585;&#1601; &#1580;&#1604;&#1587;&#1577; &#1605;&#1580;&#1607;&#1608;&#1604;</li><li>&#1571;&#1581;&#1583;&#1575;&#1579; &#1575;&#1604;&#1578;&#1591;&#1576;&#1610;&#1602;</li><li>&#1606;&#1608;&#1593; &#1575;&#1604;&#1580;&#1607;&#1575;&#1586;</li><li>&#1575;&#1604;&#1576;&#1604;&#1583; &#1608;&#1575;&#1604;&#1604;&#1594;&#1577;</li></ul>
+
+<h2>3-11. &#1575;&#1578;&#1589;&#1604; &#1576;&#1606;&#1575;</h2>
+<p><strong>&#1575;&#1604;&#1576;&#1585;&#1610;&#1583;:</strong> farmfurygames@gmail.com</p>
+<p><em>&#1575;&#1603;&#1578;&#1576; "Farm Fury Privacy" &#1601;&#1610; &#1575;&#1604;&#1605;&#1608;&#1590;&#1608;&#1593;.</em></p>
+</div>
+
+<!-- ═══ JAPANESE ═══ -->
+<div class="policy-section" id="lang-ja">
+<h1>Farm Fury - &#12503;&#12521;&#12452;&#12496;&#12471;&#12540;&#12509;&#12522;&#12471;&#12540;</h1>
+<p class="updated">&#26368;&#32066;&#26356;&#26032;: 2026&#24180;4&#26376;3&#26085;</p>
+
+<h2>1. &#12399;&#12376;&#12417;&#12395;</h2>
+<p>&#12371;&#12398;&#12503;&#12521;&#12452;&#12496;&#12471;&#12540;&#12509;&#12522;&#12471;&#12540;&#12399;&#12289;&#12300;Farm Fury — Last Beast Standing&#12301;&#65288;&#12300;&#26412;&#12466;&#12540;&#12512;&#12301;&#65289;&#12364;&#12514;&#12496;&#12452;&#12523;&#12450;&#12503;&#12522;&#12398;&#20351;&#29992;&#26178;&#12395;&#24773;&#22577;&#12434;&#12393;&#12398;&#12424;&#12358;&#12395;&#25201;&#12358;&#12363;&#35500;&#26126;&#12375;&#12414;&#12377;&#12290;</p>
+
+<h2>2. &#21454;&#38598;&#12377;&#12427;&#24773;&#22577;</h2>
+<p><strong>&#20491;&#20154;&#24773;&#22577;&#12434;&#30452;&#25509;&#21454;&#38598;&#12377;&#12427;&#12371;&#12392;&#12399;&#12354;&#12426;&#12414;&#12379;&#12435;&#12290;</strong>&#12466;&#12540;&#12512;&#12395;&#12450;&#12459;&#12454;&#12531;&#12488;&#20316;&#25104;&#12399;&#19981;&#35201;&#12391;&#12377;&#12290;&#36914;&#34892;&#12487;&#12540;&#12479;&#12399;&#12377;&#12409;&#12390;&#12487;&#12496;&#12452;&#12473;&#12395;&#12525;&#12540;&#12459;&#12523;&#20445;&#23384;&#12373;&#12428;&#12414;&#12377;&#12290;</p>
+<p>&#12383;&#12384;&#12375;&#12289;&#32068;&#12415;&#36796;&#12414;&#12428;&#12383;&#12469;&#12540;&#12489;&#12497;&#12540;&#12486;&#12451;&#12469;&#12540;&#12499;&#12473;&#12364;&#33258;&#21205;&#30340;&#12395;&#24773;&#22577;&#12434;&#21454;&#38598;&#12377;&#12427;&#22580;&#21512;&#12364;&#12354;&#12426;&#12414;&#12377;:</p>
+
+<h3>2.1 Google AdMob&#65288;&#24195;&#21578;&#65289;</h3>
+<ul><li>&#24195;&#21578;ID</li><li>IP&#12450;&#12489;&#12524;&#12473;</li><li>&#12487;&#12496;&#12452;&#12473;&#24773;&#22577;</li><li>&#12362;&#12362;&#12424;&#12381;&#12398;&#20301;&#32622;</li><li>&#20351;&#29992;&#12487;&#12540;&#12479;</li></ul>
+
+<h3>2.2 Firebase Crashlytics</h3>
+<ul><li>&#21311;&#21517;&#12475;&#12483;&#12471;&#12519;&#12531;ID</li><li>&#12487;&#12496;&#12452;&#12473;&#12514;&#12487;&#12523;</li><li>OS&#12496;&#12540;&#12472;&#12519;&#12531;</li><li>&#12450;&#12503;&#12522;&#12496;&#12540;&#12472;&#12519;&#12531;</li><li>&#12456;&#12521;&#12540;&#12525;&#12464;</li></ul>
+<p><strong>&#20491;&#20154;&#12434;&#29305;&#23450;&#12391;&#12365;&#12427;&#24773;&#22577;&#12399;&#21454;&#38598;&#12375;&#12414;&#12379;&#12435;&#12290;</strong></p>
+
+<h3>2.3 Google Analytics</h3>
+<ul><li>&#21311;&#21517;&#12475;&#12483;&#12471;&#12519;&#12531;ID</li><li>&#12450;&#12503;&#12522;&#12452;&#12505;&#12531;&#12488;</li><li>&#12487;&#12496;&#12452;&#12473;&#12479;&#12452;&#12503;</li><li>&#22269;&#12392;&#35328;&#35486;</li></ul>
+
+<h2>3-11. &#12362;&#21839;&#12356;&#21512;&#12431;&#12379;</h2>
+<p><strong>&#12513;&#12540;&#12523;:</strong> farmfurygames@gmail.com</p>
+<p><em>&#20214;&#21517;&#12395;&#12300;Farm Fury Privacy&#12301;&#12392;&#12362;&#26360;&#12365;&#12367;&#12384;&#12373;&#12356;&#12290;</em></p>
+</div>
+
+<!-- ═══ VIETNAMESE ═══ -->
+<div class="policy-section" id="lang-vi">
+<h1>Farm Fury - Ch&#237;nh S&#225;ch Quy&#7873;n Ri&#234;ng T&#432;</h1>
+<p class="updated">C&#7853;p nh&#7853;t l&#7847;n cu&#7889;i: 3 th&#225;ng 4, 2026</p>
+
+<h2>1. Gi&#7899;i thi&#7879;u</h2>
+<p>Ch&#237;nh s&#225;ch n&#224;y gi&#7843;i th&#237;ch c&#225;ch "Farm Fury — Last Beast Standing" ("Tr&#242; ch&#417;i") x&#7917; l&#253; th&#244;ng tin khi b&#7841;n s&#7917; d&#7909;ng &#7913;ng d&#7909;ng c&#7911;a ch&#250;ng t&#244;i.</p>
+
+<h2>2. Th&#244;ng tin ch&#250;ng t&#244;i thu th&#7853;p</h2>
+<p><strong>Ch&#250;ng t&#244;i kh&#244;ng tr&#7921;c ti&#7871;p thu th&#7853;p th&#244;ng tin c&#225; nh&#226;n.</strong> Tr&#242; ch&#417;i kh&#244;ng y&#234;u c&#7847;u t&#7841;o t&#224;i kho&#7843;n. Ti&#7871;n &#273;&#7897; &#273;&#432;&#7907;c l&#432;u tr&#7919; c&#7909;c b&#7897; tr&#234;n thi&#7871;t b&#7883; c&#7911;a b&#7841;n.</p>
+<p>Tuy nhi&#234;n, c&#225;c d&#7883;ch v&#7909; b&#234;n th&#7913; ba c&#243; th&#7875; t&#7921; &#273;&#7897;ng thu th&#7853;p:</p>
+
+<h3>2.1 Google AdMob (Qu&#7843;ng c&#225;o)</h3>
+<ul><li>ID qu&#7843;ng c&#225;o</li><li>&#272;&#7883;a ch&#7881; IP</li><li>Th&#244;ng tin thi&#7871;t b&#7883;</li><li>V&#7883; tr&#237; g&#7847;n &#273;&#250;ng</li><li>D&#7919; li&#7879;u s&#7917; d&#7909;ng</li></ul>
+
+<h3>2.2 Firebase Crashlytics</h3>
+<ul><li>ID phi&#234;n &#7849;n danh</li><li>Model thi&#7871;t b&#7883;</li><li>Phi&#234;n b&#7843;n H&#272;H</li><li>Phi&#234;n b&#7843;n &#7913;ng d&#7909;ng</li><li>Nh&#7853;t k&#253; l&#7895;i</li></ul>
+<p><strong>Kh&#244;ng thu th&#7853;p th&#244;ng tin c&#225; nh&#226;n.</strong></p>
+
+<h3>2.3 Google Analytics</h3>
+<ul><li>ID phi&#234;n &#7849;n danh</li><li>S&#7921; ki&#7879;n &#7913;ng d&#7909;ng</li><li>Lo&#7841;i thi&#7871;t b&#7883;</li><li>Qu&#7889;c gia v&#224; ng&#244;n ng&#7919;</li></ul>
+
+<h2>3-11. Li&#234;n h&#7879;</h2>
+<p><strong>Email:</strong> farmfurygames@gmail.com</p>
+<p><em>Ghi "Farm Fury Privacy" trong ti&#234;u &#273;&#7873;.</em></p>
+</div>
+
+<!-- ═══ INDONESIAN ═══ -->
+<div class="policy-section" id="lang-id">
+<h1>Farm Fury - Kebijakan Privasi</h1>
+<p class="updated">Terakhir diperbarui: 3 April 2026</p>
+
+<h2>1. Pendahuluan</h2>
+<p>Kebijakan privasi ini menjelaskan bagaimana "Farm Fury — Last Beast Standing" ("Game") menangani informasi saat Anda menggunakan aplikasi mobile kami.</p>
+
+<h2>2. Informasi yang kami kumpulkan</h2>
+<p><strong>Kami tidak mengumpulkan informasi pribadi secara langsung.</strong> Game tidak memerlukan pembuatan akun. Semua kemajuan disimpan secara lokal di perangkat Anda.</p>
+<p>Namun, layanan pihak ketiga dapat mengumpulkan informasi secara otomatis:</p>
+
+<h3>2.1 Google AdMob (Iklan)</h3>
+<ul><li>ID iklan perangkat</li><li>Alamat IP</li><li>Informasi perangkat</li><li>Lokasi perkiraan</li><li>Data penggunaan</li></ul>
+
+<h3>2.2 Firebase Crashlytics</h3>
+<ul><li>ID sesi anonim</li><li>Model perangkat</li><li>Versi OS</li><li>Versi aplikasi</li><li>Log error</li></ul>
+<p><strong>Tidak ada informasi pribadi yang dikumpulkan.</strong></p>
+
+<h3>2.3 Google Analytics</h3>
+<ul><li>ID sesi anonim</li><li>Event aplikasi</li><li>Tipe perangkat</li><li>Negara dan bahasa</li></ul>
+
+<h2>3-11. Hubungi Kami</h2>
+<p><strong>Email:</strong> farmfurygames@gmail.com</p>
+<p><em>Tulis "Farm Fury Privacy" di subjek.</em></p>
+</div>
+
+<!-- ═══ MALAY ═══ -->
+<div class="policy-section" id="lang-ms">
+<h1>Farm Fury - Dasar Privasi</h1>
+<p class="updated">Kemas kini terakhir: 3 April 2026</p>
+
+<h2>1. Pengenalan</h2>
+<p>Dasar privasi ini menerangkan bagaimana "Farm Fury — Last Beast Standing" ("Permainan") mengendalikan maklumat apabila anda menggunakan aplikasi mudah alih kami.</p>
+
+<h2>2. Maklumat yang kami kumpulkan</h2>
+<p><strong>Kami tidak mengumpul maklumat peribadi secara langsung.</strong> Permainan tidak memerlukan penciptaan akaun. Semua kemajuan disimpan secara tempatan di peranti anda.</p>
+<p>Walau bagaimanapun, perkhidmatan pihak ketiga mungkin mengumpul maklumat secara automatik:</p>
+
+<h3>2.1 Google AdMob (Pengiklanan)</h3>
+<ul><li>ID pengiklanan peranti</li><li>Alamat IP</li><li>Maklumat peranti</li><li>Lokasi anggaran</li><li>Data penggunaan</li></ul>
+
+<h3>2.2 Firebase Crashlytics</h3>
+<ul><li>ID sesi tanpa nama</li><li>Model peranti</li><li>Versi OS</li><li>Versi aplikasi</li><li>Log ralat</li></ul>
+<p><strong>Tiada maklumat peribadi dikumpulkan.</strong></p>
+
+<h3>2.3 Google Analytics</h3>
+<ul><li>ID sesi tanpa nama</li><li>Peristiwa aplikasi</li><li>Jenis peranti</li><li>Negara dan bahasa</li></ul>
+
+<h2>3-11. Hubungi Kami</h2>
+<p><strong>E-mel:</strong> farmfurygames@gmail.com</p>
+<p><em>Tulis "Farm Fury Privacy" di subjek.</em></p>
+</div>
+
+<script>
+function showLang(lang) {
+  document.querySelectorAll('.policy-section').forEach(function(s) { s.classList.remove('active'); });
+  document.querySelectorAll('.lang-btn').forEach(function(b) { b.classList.remove('active'); });
+  var section = document.getElementById('lang-' + lang);
+  if (section) section.classList.add('active');
+  var btns = document.querySelectorAll('.lang-btn');
+  var langMap = {en:0,es:1,fr:2,pt:3,ca:4,tr:5,ru:6,hi:7,ar:8,ja:9,vi:10,id:11,ms:12};
+  if (langMap[lang] !== undefined && btns[langMap[lang]]) btns[langMap[lang]].classList.add('active');
+  window.scrollTo(0, 0);
+}
+// Auto-detect browser language
+(function() {
+  var bl = (navigator.language || '').toLowerCase().substring(0, 2);
+  var supported = ['en','es','fr','pt','ca','tr','ru','hi','ar','ja','vi','id','ms'];
+  if (supported.indexOf(bl) !== -1 && bl !== 'en') showLang(bl);
+})();
+</script>
 </body>
 </html>
